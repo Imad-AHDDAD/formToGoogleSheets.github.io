@@ -4,6 +4,9 @@
    --blue-color: #003049;
    --red-color: #d62828;
    --like-white-color: #eae2b7;
+
+   --aqua-color: #009FE2;
+   --filter-color: #2F2483;
 }
 
 *{
@@ -19,6 +22,10 @@ html{
    scroll-behavior: smooth;
 }
 
+body{
+   background: url("images/background\(1920\ ×\ 1080\ px\).png") no-repeat;
+}
+
 
 .header{
    display: flex;
@@ -31,7 +38,7 @@ html{
 }
 
 .header img{
-   width: 50rem;
+   width: 100%;
 }
 
 .cont{
@@ -51,7 +58,7 @@ html{
 
 form{
    width: 35rem;
-   background-color: var(--blue-color);
+   background-color: var(--filter-color);
    margin: 2rem auto;
    padding: 2rem 1rem;
    border: none;
@@ -65,7 +72,7 @@ form{
 
 form h1{
    width: 100%;
-   background-color: var(--red-color);
+   background-color: var(--aqua-color);
    color: white;
    font-size: 2rem;
    text-align: center;
