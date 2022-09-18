@@ -23,7 +23,7 @@ html{
 }
 
 body{
-   background: url("images/background\(1920\ ×\ 1080\ px\).png") no-repeat;
+   background: url("images/background\(1920\ ×\ 1080\ px\).png");
 }
 
 
@@ -38,21 +38,17 @@ body{
 }
 
 .header img{
-   width: 100%;
+   width: 15%;
 }
 
-.cont{
+.first-section , .second-section , .photo{
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-items: center;
-   overflow: hidden;
-   padding: 0 10%;
 }
 
-
-.cont img{
-   width: 20%;
+.first-section img , .second-section img , .photo img{
+   width: 35rem;
 }
 
 
@@ -118,23 +114,11 @@ form input{
    }
 
    .header img{
-      width: 200%;
-   }
-
-   .cont{
-      flex-direction: column;
+      width: 30%;
    }
 
    form input{
       margin: 1rem 0;
-   }
-
-   .cont img{
-      width: 10rem;
-   }
-
-   .cont .tawsil img{
-      width: 45%;
    }
 }
 
