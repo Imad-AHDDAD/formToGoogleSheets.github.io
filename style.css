@@ -117,6 +117,10 @@ form input{
       font-size: 55%;
    }
 
+   .header img{
+      width: 200%;
+   }
+
    .cont{
       flex-direction: column;
    }
