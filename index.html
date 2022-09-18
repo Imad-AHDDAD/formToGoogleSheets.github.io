@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML form to Google Sheet</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
  
 <body>
     <h1 id="msg" style="display: none;"></h1>
+    <div class="cont">
+        <img src="images/banner.png" alt="">
+        <img src="images/image1.jpg" alt="">
+        <img src="images/image2.jpg" alt="">
+        <img src="images/image3.jpg" alt="">
+    </div>
     <form>
-        <h1>Enter your informations</h1>
-        <input type="text" name="name" placeholder='Name'>
-        <input type="email" name="email" placeholder='Email'>
-        <input type="submit" id="sub">
+        <h1>المرجو إدخال المعلومات الخاصة بكم</h1>
+        <input type="text" name="name" placeholder='الإسم الكامل' class="form-control p-3 fs-4" required>
+        <input type="email" name="email" placeholder='رقم الهاتف' class="form-control p-3 fs-4" required>
+        <input type="submit" id="sub" class="btn btn-success p-3 fs-4" value="إرسال">
     </form>
 
     
@@ -23,7 +30,7 @@
         let form = document.querySelector("form");
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            document.querySelector("#sub").value = "Submiting..";
+            document.querySelector("#sub").value = "جاري الإرسال";
             let data = new FormData(form);
             fetch('https://script.google.com/macros/s/AKfycbwXRuMxne5w5q1t1iHH-VWicLSeoK2C_jKBD3IHiYStxRnApiDxzPe_wBBa7G07a4LOcw/exec', {
                     method: "POST",
@@ -33,8 +40,8 @@
                 .then(res => res.text())
                 .then(data => {
                     document.querySelector("#msg").style.display="block";
-                    document.querySelector("#msg").innerHTML = "your informations were submitted";
-                    document.querySelector("#sub").value = "Submit"
+                    document.querySelector("#msg").innerHTML = "لقد تم إرسال معلوماتكم بنجاح";
+                    document.querySelector("#sub").value = "إرسال"
                 });
         })
     </script>

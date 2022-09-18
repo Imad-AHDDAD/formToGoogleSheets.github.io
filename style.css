@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap');
 
 :root{
    --blue-color: #003049;
@@ -9,7 +9,7 @@
 *{
    margin: 0;
    padding: 0;
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Noto Kufi Arabic', sans-serif;
 }
 
 html{
@@ -21,6 +21,20 @@ html{
 
 body{
    position: relative;
+}
+
+.cont{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   overflow: hidden;
+   padding: 0 10%;
+}
+
+.cont img{
+   width: 30rem;
 }
 
 
@@ -42,16 +56,18 @@ form h1{
    width: 100%;
    background-color: var(--red-color);
    color: white;
+   font-size: 2rem;
    text-align: center;
    padding: 1rem 0;
 }
 
 form input{
    width: 100%;
-   outline: none;
-   padding: .5rem;
-   font-weight: 100;
-   font-size: 1.7rem;
+   text-align: center;
+}
+
+#sub{
+   text-align: center;
 }
 
 #msg{
@@ -85,6 +101,14 @@ form input{
 
    body{
       padding: 0 5%;
+   }
+
+   form{
+      gap: 2rem;
+   }
+
+   .cont img{
+      width: 10rem;
    }
 }
 
