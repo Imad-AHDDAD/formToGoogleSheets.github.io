@@ -1,39 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+	<html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html form to google sheets</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HTML form to Google Sheet</title>
 </head>
+ 
 <body>
-
+    <h1 id="msg"></h1>
     <form>
-        <input type="text" name="name" placeholder="your name"><br><br>
-        <input type="email" name="email" placeholder="your email"><br><br>
-        <button type="submit">submit</button>
+        <input type="text" name="name" placeholder='Name'><br><br>
+        <input type="email" name="email" placeholder='Email'><br><br>
+        <input type="tel" name="phone" placeholder='Phone'><br><br>
+        <input type="submit" id="sub">
     </form>
-    
-
     <script>
         let form = document.querySelector("form");
-        form.addEventListener('submit' , (e)=>{
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            document.querySelector("button").innerHTML = "submiting...";
-            let data  = new FormData(form);
-            fetch('https://script.google.com/macros/s/AKfycbyRBR63vZSd_MZXyvIuMppICE6hf-_ZvrPskFtFfDyYbD7v1vS3pWoheZcijH-hHGB7Tw/exec' , {
-                method:"POST",
-                body: data
-            })
+            document.querySelector("#sub").value = "Submiting..";
+            let data = new FormData(form);
+            fetch('https://script.google.com/macros/s/AKfycbwW4qN0NktH0WoP4J1zywuO2z39R7xpNBC-L7BbbQH-2gvX-O7ksn7RqTXZIiWm1uTcCQ/exec', {
+                    method: "POST",
+                    body: data
+                })
                 .then(res => res.text())
                 .then(data => {
                     document.querySelector("#msg").innerHTML = data;
-                    document.querySelector("button").innerHTML = "submit";
-                    console.log(data);
+                    document.querySelector("#sub").value = "Submit"
                 });
-        });
+        })
     </script>
-
 </body>
+ 
 </html>
