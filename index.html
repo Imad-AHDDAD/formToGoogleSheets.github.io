@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML form to Google Sheet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
  
 <body>
-    <h1 id="msg"></h1>
+    <h1 id="msg" style="display: none;"></h1>
     <form>
-        <input type="text" name="name" placeholder='Name'><br><br>
-        <input type="email" name="email" placeholder='Email'><br><br>
+        <h1>Enter your informations</h1>
+        <input type="text" name="name" placeholder='Name'>
+        <input type="email" name="email" placeholder='Email'>
         <input type="submit" id="sub">
     </form>
+
+    
+    <div class="signature"><h5>imad AHDDAD</h5></div>
     <script>
         let form = document.querySelector("form");
         form.addEventListener('submit', (e) => {
@@ -27,6 +32,7 @@
                 })
                 .then(res => res.text())
                 .then(data => {
+                    document.querySelector("#msg").style.display="block";
                     document.querySelector("#msg").innerHTML = "your informations were submitted";
                     document.querySelector("#sub").value = "Submit"
                 });
