@@ -11,12 +11,8 @@
  
 <body>
     <h1 id="msg" style="display: none;"></h1>
-    <div class="cont">
-        <img src="images/banner.png" alt="">
-        <img src="images/image1.jpg" alt="">
-        <img src="images/image2.jpg" alt="">
-        <img src="images/image3.jpg" alt="">
-    </div>
+    <div class="header"><img src="images/banner.png" alt=""></div>
+    
     <form>
         <h1>المرجو إدخال المعلومات الخاصة بكم</h1>
         <input type="text" name="name" placeholder='الإسم الكامل' class="form-control p-3 fs-4 my-md-1" required>
@@ -24,8 +20,14 @@
         <input type="submit" id="sub" class="btn btn-success p-3 fs-4" value="إرسال">
     </form>
 
+    <div class="cont">
+        <img src="images/image5.png" alt="">
+        <img src="images/image1.jpg" alt="">
+        <img src="images/image2.jpg" alt="">
+        <img src="images/image3.jpg" alt="">
+        <img src="images/image4.png" alt="">
+    </div>
     
-    <div class="signature"><h5>imad AHDDAD</h5></div>
     <script>
         let form = document.querySelector("form");
         form.addEventListener('submit', (e) => {

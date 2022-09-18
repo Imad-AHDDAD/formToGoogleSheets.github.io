@@ -19,8 +19,19 @@ html{
    scroll-behavior: smooth;
 }
 
-body{
-   position: relative;
+
+.header{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   overflow: hidden;
+   margin-bottom: 1rem;
+}
+
+.header img{
+   width: 50rem;
 }
 
 .cont{
@@ -34,7 +45,7 @@ body{
 }
 
 .cont img{
-   width: 30rem;
+   width: 20%;
 }
 
 
