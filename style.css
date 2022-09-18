@@ -89,7 +89,7 @@ form input{
 }
 
 #msg{
-   background-color: var(--blue-color);
+   background-color: var(--filter-color);
    color: white;
    text-align: center;
    padding: 1rem;
@@ -117,8 +117,8 @@ form input{
       font-size: 55%;
    }
 
-   body{
-      padding: 0 5%;
+   .cont{
+      flex-direction: column;
    }
 
    form input{
