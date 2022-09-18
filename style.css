@@ -103,8 +103,8 @@ form input{
       padding: 0 5%;
    }
 
-   form{
-      gap: 2rem;
+   form input{
+      margin: 1rem 0;
    }
 
    .cont img{
