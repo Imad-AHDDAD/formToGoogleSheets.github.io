@@ -46,10 +46,10 @@ body{
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   gap: 1rem;
    overflow: hidden;
    padding: 0 10%;
 }
+
 
 .cont img{
    width: 20%;
@@ -127,6 +127,10 @@ form input{
 
    .cont img{
       width: 10rem;
+   }
+
+   .cont .tawsil img{
+      width: 45%;
    }
 }
 
