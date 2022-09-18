@@ -73,3 +73,25 @@ form input{
    width: 100%;
 }
 
+
+
+/* media queries */
+
+@media (max-width: 991px){
+
+   html{
+      font-size: 55%;
+   }
+
+   body{
+      padding: 0 5%;
+   }
+}
+
+
+@media (max-width: 450px){
+
+   html{
+      font-size: 50%;
+   }
+}
