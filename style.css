@@ -46,9 +46,8 @@ footer{
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 50rem;
    padding: 1rem 2rem;
-   margin: 2rem 10%;
+   margin: 2rem auto;
    color: white;
    background-color: var(--filter-color);
    border: none;
@@ -148,8 +147,16 @@ form input{
       width: 30%;
    }
 
+   body{
+      padding: 0 10%;
+   }
+
    form input{
       margin: 1rem 0;
+   }
+   .success-msg{
+      height: 80vh;
+      padding: 1rem 20rem;
    }
 }
 
