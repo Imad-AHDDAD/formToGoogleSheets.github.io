@@ -15,18 +15,23 @@
    font-family: 'Noto Kufi Arabic', sans-serif;
 }
 
-body{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-
 html{
    font-size: 62.5%;
    overflow-x: hidden;
    scroll-padding-top: 7rem;
    scroll-behavior: smooth;
+}
+
+.success-msg{
+   width: 50%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.success-msg img{
+   width: 90%;
 }
 
 body{
@@ -47,20 +52,6 @@ footer{
    display: flex;
    align-items: center;
    justify-content: center;
-}
-
-.success-msg{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 1rem 2rem;
-   margin: 2rem auto;
-   color: white;
-   background-color: var(--filter-color);
-   border: none;
-   border-radius: .5rem;
-   font-size: 2.5rem;
-   text-align: center;
 }
 
 .header{
@@ -154,17 +145,12 @@ form input{
       width: 30%;
    }
 
-   body{
-      padding: 0 10%;
-   }
-
    form input{
       margin: 1rem 0;
    }
+
    .success-msg{
-      height: 70vh;
-      padding: 1rem 10rem;
-      width: 50%;
+      width: 90%;
    }
 }
 
