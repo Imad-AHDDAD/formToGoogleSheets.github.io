@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML form to Google Sheet</title>
+    <title>تأكيد المعلومات</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
  
 <body>
-    <h1 id="msg" style="display: none;"></h1>
+    <!-- <h1 id="msg" style="display: none;"></h1> -->
     <div class="header"><img src="images/logo aqua png.png" alt=""></div>
     
     <div class="first-section"><img src="images/landign first section.png" alt=""></div>
@@ -18,7 +18,7 @@
         <h1>المرجو إدخال اسمكم و رقم هاتفكم و فريقنا سيتصل بكم في أقرب وقت للاجابة على اسئلتكم</h1>
         <input type="text" name="name" placeholder='الإسم الكامل' class="form-control py-4 fs-3 my-md-1" required>
         <input type="phone" name="email" placeholder='رقم الهاتف' class="form-control py-4 fs-3 my-md-1" required>
-        <input type="submit" id="sub" class="btn btn-success p-3 fs-4" value="إرسال">
+        <input type="submit" id="sub" class="btn btn-success p-3 fs-4" value="تأكيد المعلومات">
     </form>
 
     <div class="photo"><img src="images/Sans titre (1080 × 1080 px).png" alt=""></div>
@@ -28,7 +28,7 @@
         let form = document.querySelector("form");
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            document.querySelector("#sub").value = "جاري الإرسال";
+            document.querySelector("#sub").value = "المرجو الانتظار";
             let data = new FormData(form);
             fetch('https://script.google.com/macros/s/AKfycbwXRuMxne5w5q1t1iHH-VWicLSeoK2C_jKBD3IHiYStxRnApiDxzPe_wBBa7G07a4LOcw/exec', {
                     method: "POST",
@@ -37,12 +37,18 @@
                 })
                 .then(res => res.text())
                 .then(data => {
-                    document.querySelector("#msg").style.display="block";
-                    document.querySelector("#msg").innerHTML = "لقد تم إرسال معلوماتكم بنجاح";
-                    document.querySelector("#sub").value = "إرسال"
+                    // document.querySelector("#msg").style.display="block";
+                    // document.querySelector("#msg").innerHTML = "لقد تم إرسال معلوماتكم بنجاح";
+                    document.querySelector("#sub").value = "تأكيد المعلوملت";
+                    location.replace("success.html");
                 });
         })
     </script>
+
+    <footer>
+        <a href="https://aquafilter.ma/a-propos/">termes of services</a> | <a href="http://aquafilter.ma/a-propos/">privacy policy</a>
+    </footer>
+
 </body>
  
 </html>

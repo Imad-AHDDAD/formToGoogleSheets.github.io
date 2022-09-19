@@ -26,6 +26,36 @@ body{
    background: url("images/background\(1920\ ×\ 1080\ px\).png");
 }
 
+footer{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   font-size: 1.7rem;
+   gap: 1rem;
+}
+
+.aquafilter{
+   margin: 1rem auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.success-msg{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50rem;
+   padding: 1rem 2rem;
+   margin: 2rem auto;
+   color: white;
+   background-color: var(--filter-color);
+   border: none;
+   border-radius: .5rem;
+   font-size: 2.5rem;
+   text-align: center;
+}
 
 .header{
    display: flex;
