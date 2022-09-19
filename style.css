@@ -163,7 +163,8 @@ form input{
    }
    .success-msg{
       height: 70vh;
-      padding: 1rem 20rem;
+      padding: 1rem 10rem;
+      width: 50%;
    }
 }
 
